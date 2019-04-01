@@ -1,6 +1,7 @@
 <!doctype html>
 
-<html lang="en">
+<html lang="pl">
+
 <head>
   <meta charset="utf-8">
 
@@ -9,23 +10,35 @@
   <meta name="author" content="Michal Krawczyk">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
-  
+
 </head>
 
 <body>
 
-	<header>
-		<h1>JPK XML file creator</h1>
-  </header>
-  <section>
-    <label for="title">Nazwa pliku:</label>
-    <input type="text" name="title" />  
-  </section>
-  
+  <div id="container">
+    <header>
+      <h1>JPK XML file creator</h1>
+    </header>
 
+    <section id="form">
+      <label for="title">Nazwa pliku:</label>
+      <input type="text" name="title" />
+      <br>
+      <button name="create" id="create-button">Utwórz</button>
+    </section>
 
+    <section id="result">
+      <code id="code">
+          Tu pojawi się wynik
+        </code>
+    </section>
+  </div>
 
+  <!-- <footer>
+      &copy; Michalk
+  </footer> -->
 
   <script src="js/scripts.js"></script>
 </body>
+
 </html>
