@@ -1,5 +1,6 @@
 * {
 	margin: 0;
+	box-sizing: border-box;
 }
 
 body {
@@ -20,4 +21,16 @@ header {
 
 section {
     margin: 25px 0 25px 0;
+}
+
+td {
+	width: 100px;
+}
+
+td:first-child {
+	width: 10px;
+}
+
+td > input {
+	width: 100%;
 }
