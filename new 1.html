@@ -10,53 +10,50 @@
   <meta name="author" content="Michal Krawczyk">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
 <body>
 
-  <div id="container">
-    <header>
-      <h1>JPK XML file creator</h1>
-    </header>
-
-    <section id="form">
-      <label for="title">Nazwa pliku:</label>
-      <input type="text" name="title" />
-      <br>
-      <button name="create" id="create-button">Utwórz</button>
+  <div class="container">
+    <section>
+        <div class="row">
+            <div class="col-12">
+                <header>
+                    <h1>JPK XML file creator</h1>
+                  </header>
+            </div>
+          </div>
     </section>
-
-    <section class="sellRow">
-      <table>
-        <thead>
-          <tr>
-            <th>Lp</th>
-            <th>Nr Kontrahenta</th>
-            <th>Nazwa Kontrahenta</th>
-            <th>Adres Kontrahenta</th>
-            <th>Dowod Sprzedazy</th>
-            <th>Data Wystawienia</th>
-            <th>Data Sprzedazy</th>
-            <th>K_19</th>
-            <th>K_20</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr>
-              <td><input type="text" name="lp" value="1"></td>
-              <td><input type="text" name="NrKontrahenta" placeholder="Numer Kontrahenta"></td>
-              <td><input type="text" name="NazwaKontrahenta" placeholder="Nazwa Kontrahenta"></td>
-              <td><input type="text" name="AdresKontrahenta" placeholder="Adres Kontrahenta"></td>
-              <td><input type="text" name="DowodSprzedazy" placeholder="Dowod Sprzedazy"></td>
-              <td><input type="text" name="DataWystawienia" placeholder="Data Wystawienia"></td>
-              <td><input type="text" name="DataSprzedazy" placeholder="Data Sprzedazy"></td>
-              <td><input type="number" name="K_19" placeholder="K_19"></td>
-              <td><input type="number" name="K_20" placeholder="K_20"></td>
-            </tr>
-        </tbody>
-      </table>
+    <section>
+      <div class="row">
+          <div class="col-1 px-1 text-center">LP</div>
+          <div class="col-2 px-1 text-center">Numer Kontrahenta</div>
+          <div class="col-2 px-1 text-center">Nazwa Kontrahenta</div>
+          <div class="col-2 px-1 text-center">Adres Kontrahenta</div>
+          <div class="col-1 px-1 text-center">Dowod Sprzedazy</div>
+          <div class="col-1 px-1 text-center">Data Wystawienia</div>
+          <div class="col-1 px-1 text-center">Data Sprzedazy</div>
+          <div class="col-1 px-1 text-center">K_19</div>
+          <div class="col-1 px-1 text-center">K_20</div>
+      </div>
+      <div class="row">
+        <div class="col-1 px-1 text-center">1</div>
+        <div class="col-2 px-1"><input type="text" name="NrKontrahenta" placeholder="Numer Kontrahenta"></div>
+        <div class="col-2 px-1"><input type="text" name="NazwaKontrahenta" placeholder="Nazwa Kontrahenta"></div>
+        <div class="col-2 px-1"><input type="text" name="AdresKontrahenta" placeholder="Adres Kontrahenta"></div>
+        <div class="col-1 px-1"><input type="text" name="DowodSprzedazy" placeholder="Dowod Sprzedazy"></div>
+        <div class="col-1 px-1"><input type="date" name="DataWystawienia" placeholder="Data Wystawienia"></div>
+        <div class="col-1 px-1"><input type="date" name="DataSprzedazy" placeholder="Data Sprzedazy"></div>
+        <div class="col-1 px-1"><input type="number" name="K_19" placeholder="K_19"></div>
+        <div class="col-1 px-1"><input type="number" name="K_20" placeholder="K_20"></div>
+      </div>
     </section>
+    <div class="row">
+      <div class="col-2 offset-5 px-1 text-center"><button type="button" class="btn btn-success" name="Save">Zapisz do pliku</button></div>
+    </div>
+  </section>
 
     <section id="result">
       <code id="code">
@@ -70,6 +67,9 @@
   </footer> -->
 
   <script src="js/scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 
 </html>
