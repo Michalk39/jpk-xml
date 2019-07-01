@@ -25,7 +25,7 @@
       </div>
     </div>
 
-    <div id="ile_wierszy">
+    <div id="rows_quantity">
       <div class="form-group row">
         <label for="rows_sell" class="col-sm-2 col-form-label">Wiersze sprzedaży:</label>
         <input type="number" class="form-control col-2" id="rows_sell">
@@ -38,6 +38,31 @@
         <div class="col-4 text-center"><button type="button" class="btn btn-primary" id="generate_form">Generuj formularz</button></div>
       </div>
     </div>
+
+    <div id="naglowek_xml">
+      <div class="form-group row">
+        <label for="kodSystemowy" class="col-sm-2 col-form-label">kodSystemowy:</label>
+        <input type="text" class="form-control col-2" id="kodSystemowy" value="JPK_VAT (3)">
+
+        <label for="wersjaSchemy" class="col-sm-2 col-form-label">wersjaSchemy:</label>
+        <input type="text" class="form-control col-2" id="wersjaSchemy" value="1-1">
+
+        <label for="KodFormularza" class="col-sm-2 col-form-label">KodFormularza:</label>
+        <input type="text" class="form-control col-2" id="KodFormularza" value="JPK_VAT">
+      </div>
+
+
+        <tns:Naglowek>
+            <tns:KodFormularza kodSystemowy="JPK_VAT (3)" wersjaSchemy="1-1">JPK_VAT</tns:KodFormularza>
+            <tns:WariantFormularza>3</tns:WariantFormularza>
+            <tns:CelZlozenia>0</tns:CelZlozenia>
+            <tns:DataWytworzeniaJPK>2019-03-23T11:02:14Z</tns:DataWytworzeniaJPK>
+            <tns:DataOd>2019-02-01</tns:DataOd>
+            <tns:DataDo>2019-02-28</tns:DataDo>
+            <tns:NazwaSystemu>brak</tns:NazwaSystemu>
+            </tns:Naglowek>
+
+    </div>    
 
 
     <form>
