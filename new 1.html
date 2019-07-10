@@ -34,8 +34,9 @@
         <label for="rows_buy" class="col-sm-2 col-form-label">Wiersze zakupu:</label>
         <input type="number" class="form-control col-2" id="rows_buy">
       </div>
-      <div class="row">
-        <div class="col-4 text-center"><button type="button" class="btn btn-primary" id="generate_form">Generuj formularz</button></div>
+      <div class="form-group row">
+        <div class="col-4 text-center"><button type="button" class="btn btn-primary" id="generate_form">Generuj
+            formularz</button></div>
       </div>
     </div>
 
@@ -50,28 +51,41 @@
         <label for="KodFormularza" class="col-sm-2 col-form-label">KodFormularza:</label>
         <input type="text" class="form-control col-2" id="KodFormularza" value="JPK_VAT">
       </div>
+      <div class="form-group row">
+        <label for="WariantFormularza" class="col-sm-2 col-form-label">WariantFormularza:</label>
+        <input type="text" class="form-control col-2" id="WariantFormularza" value="3">
+
+        <label for="CelZlozenia" class="col-sm-2 col-form-label">CelZlozenia:</label>
+        <input type="text" class="form-control col-2" id="CelZlozenia" value="0">
+      </div>
+      <div class="form-group row">
+        <label for="DataWytworzeniaJPK" class="col-sm-2 col-form-label">DataWytworzeniaJPK:</label>
+        <input type="text" class="form-control col-3" id="DataWytworzeniaJPK" value=""> <!-- TO DO POPRAWY -->
+      </div>
+      <div class="form-group row">
+        <label for="DataOd" class="col-sm-2 col-form-label">DataOd:</label>
+        <input type="text" class="form-control col-2" id="DataOd" value="">
+        
+        <label for="DataDo" class="col-sm-2 col-form-label">DataDo:</label>
+        <input type="text" class="form-control col-2" id="DataDo" value="">
+      </div>
+      <div class="form-group row">
+        <label for="NazwaSystemu" class="col-sm-2 col-form-label">NazwaSystemu:</label>
+        <input type="text" class="form-control col-2" id="NazwaSystemu" value="brak">
+      </div>
 
 
-        <tns:Naglowek>
-            <tns:KodFormularza kodSystemowy="JPK_VAT (3)" wersjaSchemy="1-1">JPK_VAT</tns:KodFormularza>
-            <tns:WariantFormularza>3</tns:WariantFormularza>
-            <tns:CelZlozenia>0</tns:CelZlozenia>
-            <tns:DataWytworzeniaJPK>2019-03-23T11:02:14Z</tns:DataWytworzeniaJPK>
-            <tns:DataOd>2019-02-01</tns:DataOd>
-            <tns:DataDo>2019-02-28</tns:DataDo>
-            <tns:NazwaSystemu>brak</tns:NazwaSystemu>
-            </tns:Naglowek>
+      <tns:Naglowek>
+        <tns:NazwaSystemu>brak</tns:NazwaSystemu>
+      </tns:Naglowek>
 
-    </div>    
+    </div>
 
 
     <form>
-      
+
     </form>
 
-    <code id="code">
-        <br><br><br>Tu pojawi się wynik
-    </code>
   </div>
 
   <!-- <footer>
