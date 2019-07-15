@@ -25,13 +25,56 @@ function setBoundaryMonthDays() {
   dataDoInput.value = lastDayFormated;
 }
 
-function myFunction() {
-  document.getElementById("code").innerHTML = "It works!";
+
+// var counter = 5;
+// var jpkrow = `<div class="row">
+//                 <div class="col-1 px-1 text-center">${counter}</div>
+//                 <input class="col-2 px-1 form-control" type="text" name="${counter}NrKontrahenta" placeholder="Numer Kontrahenta">
+//                 <input class="col-2 px-1 form-control" type="text" name="${counter}NazwaKontrahenta" placeholder="Nazwa Kontrahenta">
+//                 <input class="col-2 px-1 form-control" type="text" name="${counter}AdresKontrahenta" placeholder="Adres Kontrahenta">
+//                 <input class="col-1 px-1 form-control" type="text" name="${counter}DowodSprzedazy" placeholder="Dowod Sprzedazy">
+//                 <input class="col-1 px-1 form-control" type="date" name="${counter}DataWystawienia" placeholder="Data Wystawienia">
+//                 <input class="col-1 px-1 form-control" type="date" name="${counter}DataSprzedazy" placeholder="Data Sprzedazy">
+//                 <input class="col-1 px-1 form-control" type="number" name="${counter}K_19" placeholder="K_19">
+//                 <input class="col-1 px-1 form-control" type="number" name="${counter}K_20" placeholder="K_20">
+//               </div>`;
+
+var jpkform = document.getElementById('jpk_rows');
+
+function addRow() {
+  jpkform.insertAdjacentHTML('beforeend', jpkrow);
+
+}
+
+function addRows(rows) {
+  for (var i=0; i<rows; i++) {
+    
+    var jpkrow = `<div class="row">
+                <div class="col-1 px-1 text-center">${i+1}</div>
+                <input class="col-2 px-1 form-control" type="text" name="[${i}]NrKontrahenta" placeholder="Numer Kontrahenta">
+                <input class="col-2 px-1 form-control" type="text" name="[${i}]NazwaKontrahenta" placeholder="Nazwa Kontrahenta">
+                <input class="col-2 px-1 form-control" type="text" name="[${i}]AdresKontrahenta" placeholder="Adres Kontrahenta">
+                <input class="col-1 px-1 form-control" type="text" name="[${i}]DowodSprzedazy" placeholder="Dowod Sprzedazy">
+                <input class="col-1 px-1 form-control" type="date" name="[${i}]DataWystawienia" placeholder="Data Wystawienia">
+                <input class="col-1 px-1 form-control" type="date" name="[${i}]DataSprzedazy" placeholder="Data Sprzedazy">
+                <input class="col-1 px-1 form-control" type="number" name="[${i}]K_19" placeholder="K_19">
+                <input class="col-1 px-1 form-control" type="number" name="[${i}]K_20" placeholder="K_20">
+              </div>`;
+
+    jpkform.insertAdjacentHTML('beforeend', jpkrow);
+  }
+
+}
+
+var generateButton = document.getElementById('generate_form');
+
+generateButton.onclick = function() {
+  var sellRowsQuantity = document.getElementById('rows_sell').value;
+  addRows(sellRowsQuantity);
 }
 
 window.onload = function() {
   setCurrentDatetime();
   setBoundaryMonthDays();
-  
 
 };

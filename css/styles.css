@@ -34,3 +34,7 @@ td:first-child {
 input {
 	width: 100%;
 }
+
+#naglowek_xml {
+	border-bottom: 3px solid #eee;
+}

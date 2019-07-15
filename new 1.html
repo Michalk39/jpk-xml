@@ -40,7 +40,7 @@
       </div>
     </div>
 
-    <div id="naglowek_xml">
+    <!-- <div id="naglowek_xml">
       <div class="form-group row">
         <label for="kodSystemowy" class="col-sm-2 col-form-label">kodSystemowy:</label>
         <input type="text" class="form-control col-2" id="kodSystemowy" value="JPK_VAT (3)">
@@ -60,12 +60,12 @@
       </div>
       <div class="form-group row">
         <label for="DataWytworzeniaJPK" class="col-sm-2 col-form-label">DataWytworzeniaJPK:</label>
-        <input type="text" class="form-control col-3" id="DataWytworzeniaJPK" value=""> <!-- TO DO POPRAWY -->
+        <input type="text" class="form-control col-3" id="DataWytworzeniaJPK" value="">
       </div>
       <div class="form-group row">
         <label for="DataOd" class="col-sm-2 col-form-label">DataOd:</label>
         <input type="text" class="form-control col-2" id="DataOd" value="">
-        
+
         <label for="DataDo" class="col-sm-2 col-form-label">DataDo:</label>
         <input type="text" class="form-control col-2" id="DataDo" value="">
       </div>
@@ -73,18 +73,31 @@
         <label for="NazwaSystemu" class="col-sm-2 col-form-label">NazwaSystemu:</label>
         <input type="text" class="form-control col-2" id="NazwaSystemu" value="brak">
       </div>
+    </div> -->
 
-
-      <tns:Naglowek>
-        <tns:NazwaSystemu>brak</tns:NazwaSystemu>
-      </tns:Naglowek>
-
+    <div class="row">
+      <div class="col-1 px-1 text-center">LP</div>
+      <div class="col-2 px-1 text-center">Numer Kontrahenta</div>
+      <div class="col-2 px-1 text-center">Nazwa Kontrahenta</div>
+      <div class="col-2 px-1 text-center">Adres Kontrahenta</div>
+      <div class="col-1 px-1 text-center">Dowod Sprzedazy</div>
+      <div class="col-1 px-1 text-center">Data Wystawienia</div>
+      <div class="col-1 px-1 text-center">Data Sprzedazy</div>
+      <div class="col-1 px-1 text-center">K_19</div>
+      <div class="col-1 px-1 text-center">K_20</div>
     </div>
 
+    <div id="jpk_rows">
 
-    <form>
+    </div>
+    <div class="row">
+      <hr>
+    </div>
+    <div class="row">
+      <div class="col-2 offset-5 px-1 text-center"><button type="button" class="btn btn-success" name="Save">Zapisz do
+          pliku</button></div>
+    </div>
 
-    </form>
 
   </div>
 
