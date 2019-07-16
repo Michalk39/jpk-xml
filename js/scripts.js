@@ -25,31 +25,13 @@ function setBoundaryMonthDays() {
   dataDoInput.value = lastDayFormated;
 }
 
+var jpkFormSell = document.getElementById('jpk_rows_sell');
+var jpkFormBuy = document.getElementById('jpk_rows_buy');
 
-// var counter = 5;
-// var jpkrow = `<div class="row">
-//                 <div class="col-1 px-1 text-center">${counter}</div>
-//                 <input class="col-2 px-1 form-control" type="text" name="${counter}NrKontrahenta" placeholder="Numer Kontrahenta">
-//                 <input class="col-2 px-1 form-control" type="text" name="${counter}NazwaKontrahenta" placeholder="Nazwa Kontrahenta">
-//                 <input class="col-2 px-1 form-control" type="text" name="${counter}AdresKontrahenta" placeholder="Adres Kontrahenta">
-//                 <input class="col-1 px-1 form-control" type="text" name="${counter}DowodSprzedazy" placeholder="Dowod Sprzedazy">
-//                 <input class="col-1 px-1 form-control" type="date" name="${counter}DataWystawienia" placeholder="Data Wystawienia">
-//                 <input class="col-1 px-1 form-control" type="date" name="${counter}DataSprzedazy" placeholder="Data Sprzedazy">
-//                 <input class="col-1 px-1 form-control" type="number" name="${counter}K_19" placeholder="K_19">
-//                 <input class="col-1 px-1 form-control" type="number" name="${counter}K_20" placeholder="K_20">
-//               </div>`;
-
-var jpkform = document.getElementById('jpk_rows');
-
-function addRow() {
-  jpkform.insertAdjacentHTML('beforeend', jpkrow);
-
-}
-
-function addRows(rows) {
+function addSellRows(rows) {
   for (var i=0; i<rows; i++) {
     
-    var jpkrow = `<div class="row">
+    var jpkSellRow = `<div class="row">
                 <div class="col-1 px-1 text-center">${i+1}</div>
                 <input class="col-2 px-1 form-control" type="text" name="[${i}]NrKontrahenta" placeholder="Numer Kontrahenta">
                 <input class="col-2 px-1 form-control" type="text" name="[${i}]NazwaKontrahenta" placeholder="Nazwa Kontrahenta">
@@ -61,7 +43,27 @@ function addRows(rows) {
                 <input class="col-1 px-1 form-control" type="number" name="[${i}]K_20" placeholder="K_20">
               </div>`;
 
-    jpkform.insertAdjacentHTML('beforeend', jpkrow);
+    jpkFormSell.insertAdjacentHTML('beforeend', jpkSellRow);
+  }
+
+}
+
+function addBuyRows(rows) {
+  for (var i=0; i<rows; i++) {
+    
+    var jpkBuyRow = `<div class="row">
+                        <div class="col-1 px-1 text-center">${i+1}</div>
+                        <input class="col-2 px-1 form-control" type="text" name="[${i}]NrDostawcy" placeholder="NrDostawcy">
+                        <input class="col-2 px-1 form-control" type="text" name="[${i}]NazwaDostawcy" placeholder="NazwaDostawcy">
+                        <input class="col-2 px-1 form-control" type="text" name="[${i}]AdresDostawcy" placeholder="AdresDostawcy">
+                        <input class="col-1 px-1 form-control" type="text" name="[${i}]DowodZakupu" placeholder="DowodZakupu">
+                        <input class="col-1 px-1 form-control" type="text" name="[${i}]DataZakupu" placeholder="DataZakupu">
+                        <input class="col-1 px-1 form-control" type="date" name="[${i}]DataWplywu" placeholder="DataWplywu">
+                        <input class="col-1 px-1 form-control" type="number" name="[${i}]K_45" placeholder="K_45">
+                        <input class="col-1 px-1 form-control" type="number" name="[${i}]K_46" placeholder="K_46">
+                    </div>`;
+
+      jpkFormBuy.insertAdjacentHTML('beforeend', jpkBuyRow);
   }
 
 }
@@ -70,7 +72,9 @@ var generateButton = document.getElementById('generate_form');
 
 generateButton.onclick = function() {
   var sellRowsQuantity = document.getElementById('rows_sell').value;
-  addRows(sellRowsQuantity);
+  addSellRows(sellRowsQuantity);
+  var buyRowsQuantity = document.getElementById('rows_buy').value;
+  addBuyRows(buyRowsQuantity);
 }
 
 window.onload = function() {

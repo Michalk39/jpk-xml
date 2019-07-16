@@ -75,28 +75,45 @@
       </div>
     </div> -->
 
-    <div class="row">
-      <div class="col-1 px-1 text-center">LP</div>
-      <div class="col-2 px-1 text-center">Numer Kontrahenta</div>
-      <div class="col-2 px-1 text-center">Nazwa Kontrahenta</div>
-      <div class="col-2 px-1 text-center">Adres Kontrahenta</div>
-      <div class="col-1 px-1 text-center">Dowod Sprzedazy</div>
-      <div class="col-1 px-1 text-center">Data Wystawienia</div>
-      <div class="col-1 px-1 text-center">Data Sprzedazy</div>
-      <div class="col-1 px-1 text-center">K_19</div>
-      <div class="col-1 px-1 text-center">K_20</div>
-    </div>
+    <form enctype="multipart/form-data" method="post" name="fileinfo">
+      <div class="row" id="sell_th">
+        <div class="col-1 px-1 text-center">LP</div>
+        <div class="col-2 px-1 text-center">Numer Kontrahenta</div>
+        <div class="col-2 px-1 text-center">Nazwa Kontrahenta</div>
+        <div class="col-2 px-1 text-center">Adres Kontrahenta</div>
+        <div class="col-1 px-1 text-center">Dowod Sprzedazy</div>
+        <div class="col-1 px-1 text-center">Data Wystawienia</div>
+        <div class="col-1 px-1 text-center">Data Sprzedazy</div>
+        <div class="col-1 px-1 text-center">K_19</div>
+        <div class="col-1 px-1 text-center">K_20</div>
+      </div>
+      <div id="jpk_rows_sell">
+      </div>
+      <div class="row" id="buy_th">
+        <div class="col-1 px-1 text-center">LP</div>
+        <div class="col-2 px-1 text-center">Numer Dostawc</div>
+        <div class="col-2 px-1 text-center">Nazwa Dostawc</div>
+        <div class="col-2 px-1 text-center">Adres Dostawc</div>
+        <div class="col-1 px-1 text-center">Dowod Zakupu</div>
+        <div class="col-1 px-1 text-center">Data Zakupu</div>
+        <div class="col-1 px-1 text-center">Data Wplywu</div>
+        <div class="col-1 px-1 text-center">K_45</div>
+        <div class="col-1 px-1 text-center">K_45</div>
+      </div>
+      <div id="jpk_rows_buy">
+      </div>
 
-    <div id="jpk_rows">
+      <div class="row">
+        <hr>
+      </div>
+      <div class="row">
+        <input type="submit" value="Zapisz do pliku" class="col-2 offset-5 px-1 text-center btn btn-success">
+        <!-- <div class="col-2 offset-5 px-1 text-center"><button type="button" class="btn btn-success" name="Save">Zapisz do
+                pliku</button></div> -->
+      </div>
+    </form>
 
-    </div>
-    <div class="row">
-      <hr>
-    </div>
-    <div class="row">
-      <div class="col-2 offset-5 px-1 text-center"><button type="button" class="btn btn-success" name="Save">Zapisz do
-          pliku</button></div>
-    </div>
+
 
 
   </div>
